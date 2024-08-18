@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        generate_statistics: true
+    database: SQL_SERVER
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://172.30.4.136;encrypt=true;trustServerCertificate=true;databaseName=CEP_SIT
+    username: btsadmin
+    password: Maybank@123
+
+host:
+  url: https://dummy.restapiexample.com/api/v1/employees
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 6000
+        readTimeout: 1000

@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "d9769ad8-4dcf-4dc7-b582-ded675ce6c94",
+		"name": "User Details",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/userDetails/10000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userDetails",
+						"10000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save User Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\": \"10002\",\r\n    \"username\": \"John\",\r\n    \"city\": \"Pune\",\r\n    \"country\": \"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/userDetails/saveUserDetails",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userDetails",
+						"saveUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dummy Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/employees",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feign call to get User or Emp details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/userDetails/restCall",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userDetails",
+						"restCall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagination get all user details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/userDetails/allUserDetails/1/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userDetails",
+						"allUserDetails",
+						"1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
